@@ -1,0 +1,24 @@
+<h1 id="ac-hello">Your account</h1>
+<div class="grid-2">
+  <section class="card">
+    <h2>Points</h2>
+    <p class="big" id="ac-points">–</p>
+    <p class="muted small">1 point for every £1 of food on delivered orders. 100 points take £1 off at checkout.</p>
+    <ul id="ac-history" class="points-list"></ul>
+  </section>
+  <div class="stack">
+    <section class="card">
+      <h2>Saved addresses</h2>
+      <ul id="ac-addresses" class="address-list"></ul>
+    </section>
+    <form id="ad-form" class="card" novalidate>
+      <h2>Add an address</h2>
+      <div class="field"><label for="ad-label">Label</label><input id="ad-label" maxlength="30" autocomplete="off" placeholder="e.g. Gym"></div>
+      <div class="field"><label for="ad-street">Street address</label><input id="ad-street" maxlength="80" autocomplete="street-address"></div>
+      <div class="field"><label for="ad-postcode">Postcode</label><input id="ad-postcode" maxlength="8" autocomplete="postal-code" placeholder="e.g. FL2 4QT"></div>
+      <p class="hint">We deliver to postcodes FL1 to FL6.</p>
+      <p id="ad-msg" class="msg" role="status"></p>
+      <button type="submit" class="btn">Save address</button>
+    </form>
+  </div>
+</div>

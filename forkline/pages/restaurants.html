@@ -1,0 +1,12 @@
+<h1>Restaurants</h1>
+<form id="rs-filters" class="filters card" novalidate role="search">
+  <div class="field"><label for="rs-address">Deliver to</label><select id="rs-address"></select></div>
+  <div class="field grow"><label for="rs-q">Search</label><input id="rs-q" type="search" placeholder="Restaurant, cuisine or dish"></div>
+  <div class="field"><label for="rs-cuisine">Cuisine</label><select id="rs-cuisine"><option value="">All cuisines</option></select></div>
+  <div class="field"><label for="rs-day">Deliver on</label><select id="rs-day"></select></div>
+  <div class="field"><label for="rs-time">At</label><select id="rs-time"></select></div>
+  <div class="field"><label for="rs-sort">Sort by</label><select id="rs-sort"><option value="">Recommended</option><option value="fee">Lowest delivery fee</option><option value="rating">Top rated</option><option value="km">Nearest</option></select></div>
+  <label class="check"><input type="checkbox" id="rs-open"> Only show restaurants delivering then</label>
+</form>
+<p id="rs-count" class="muted" role="status" aria-live="polite">Loading…</p>
+<div id="rs-list" class="grid"></div>
