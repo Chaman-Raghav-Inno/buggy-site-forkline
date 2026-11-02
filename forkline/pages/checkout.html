@@ -1,0 +1,42 @@
+<h1>Checkout</h1>
+<p id="loading" class="muted">Loading…</p>
+<section id="co-empty" class="card narrow" hidden><h2>Your cart is empty</h2><p><a class="btn" href="/restaurants">Browse restaurants</a></p></section>
+<form id="co-form" class="grid-main" novalidate hidden>
+  <div class="stack">
+    <section class="card">
+      <h2>Deliver to</h2>
+      <div class="field"><label for="co-address">Address</label><select id="co-address"></select></div>
+      <p class="hint">Need a new address? <a href="/account">Add it to your account</a>.</p>
+    </section>
+    <section class="card">
+      <h2>Delivery slot</h2>
+      <div class="field-row">
+        <div class="field"><label for="co-date">Day</label><input id="co-date" type="date"></div>
+        <div class="field"><label for="co-time">Slot starts at</label><select id="co-time"></select></div>
+      </div>
+      <p class="hint" id="co-hours"></p>
+    </section>
+    <section class="card">
+      <h2>Tip your courier</h2>
+      <div class="tip-options" role="radiogroup" aria-label="Tip">
+        <label><input type="radio" name="tip" value="0" checked> No tip</label>
+        <label><input type="radio" name="tip" value="10"> 10%</label>
+        <label><input type="radio" name="tip" value="15"> 15%</label>
+        <label><input type="radio" name="tip" value="20"> 20%</label>
+        <label><input type="radio" name="tip" value="custom"> Other amount</label>
+      </div>
+      <div class="field" id="co-custom-field" hidden><label for="co-custom">Tip (£)</label><input id="co-custom" inputmode="decimal" autocomplete="off" placeholder="0.00"></div>
+    </section>
+    <section class="card">
+      <h2>Points</h2>
+      <label class="check"><input type="checkbox" id="co-points"> <span id="co-points-label"></span></label>
+    </section>
+  </div>
+  <section class="card">
+    <h2 id="co-from">Your order</h2>
+    <ul id="co-lines" class="line-list small"></ul>
+    <dl class="totals" id="co-totals"></dl>
+    <p id="co-msg" class="msg" role="alert"></p>
+    <button type="submit" class="btn btn-block" id="co-place">Place order</button>
+  </section>
+</form>

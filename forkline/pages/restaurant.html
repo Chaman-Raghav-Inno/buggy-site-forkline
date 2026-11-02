@@ -1,0 +1,39 @@
+<p><a href="/restaurants">← All restaurants</a></p>
+<p id="loading" class="muted">Loading…</p>
+<div id="restaurant" hidden>
+  <header class="rest-head">
+    <div><h1 id="rt-name"></h1><p class="muted" id="rt-meta"></p><p id="rt-blurb"></p></div>
+    <a class="card rest-card" href="/cart" id="rt-cart"></a>
+  </header>
+  <div class="grid-main">
+    <section class="card">
+      <h2>Menu</h2>
+      <ul id="rt-menu" class="menu-list"></ul>
+    </section>
+    <div class="stack">
+      <section class="card"><h2>Delivery</h2><dl class="facts" id="rt-facts"></dl></section>
+      <section class="card"><h2>Reviews</h2><ul id="rt-reviews" class="review-list"></ul></section>
+    </div>
+  </div>
+</div>
+<dialog id="it-dialog" aria-labelledby="it-name">
+  <form id="it-form" novalidate>
+    <h2 id="it-name"></h2>
+    <p id="it-desc" class="muted"></p>
+    <div id="it-options"></div>
+    <div class="field qty-field"><label for="it-qty">Quantity</label><input id="it-qty" type="number" min="1" max="20" value="1" inputmode="numeric"></div>
+    <p id="it-msg" class="msg" role="status"></p>
+    <div class="dialog-actions">
+      <button type="button" class="btn btn-ghost" id="it-cancel">Cancel</button>
+      <button type="submit" class="btn" id="it-add">Add to cart</button>
+    </div>
+  </form>
+</dialog>
+<dialog id="nc-dialog" aria-labelledby="nc-title">
+  <h2 id="nc-title">Start a new cart?</h2>
+  <p id="nc-text"></p>
+  <div class="dialog-actions">
+    <button type="button" class="btn btn-ghost" data-value="keep">Keep my cart</button>
+    <button type="button" class="btn" data-value="new">Start a new cart</button>
+  </div>
+</dialog>

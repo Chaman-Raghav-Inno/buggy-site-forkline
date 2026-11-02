@@ -1,0 +1,24 @@
+<h1>Your cart</h1>
+<p id="loading" class="muted">Loading…</p>
+<section id="ct-empty" class="card narrow" hidden><h2>Your cart is empty</h2><p class="muted">Pick a restaurant and add a few dishes.</p><p><a class="btn" href="/restaurants">Browse restaurants</a></p></section>
+<div id="cart" class="grid-main" hidden>
+  <section class="card">
+    <h2 id="ct-from"></h2>
+    <p class="muted small" id="ct-where"></p>
+    <ul id="ct-lines" class="line-list"></ul>
+  </section>
+  <div class="stack">
+    <form id="pr-form" class="card" novalidate>
+      <h2>Promo code</h2>
+      <div class="row"><label class="sr-only" for="pr-code">Promo code</label><input id="pr-code" autocomplete="off" spellcheck="false" placeholder="e.g. FEAST20"><button type="submit" class="btn">Apply</button></div>
+      <ul id="pr-list" class="refund-list"></ul>
+      <p id="pr-msg" class="msg" role="status"></p>
+    </form>
+    <section class="card">
+      <h2>Summary</h2>
+      <dl class="totals" id="ct-totals"></dl>
+      <p id="ct-note" class="hint"></p>
+      <p class="actions"><a class="btn btn-block" href="/checkout" id="ct-go">Go to checkout</a></p>
+    </section>
+  </div>
+</div>

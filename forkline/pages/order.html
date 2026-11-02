@@ -1,0 +1,48 @@
+<p><a href="/orders">← All orders</a></p>
+<p id="loading" class="muted">Loading…</p>
+<div id="order" class="grid-2" hidden>
+  <div class="stack">
+    <section class="card">
+      <div class="section-head"><h1 id="od-title"></h1><span id="od-status"></span></div>
+      <dl class="facts" id="od-facts"></dl>
+      <div class="actions"><button type="button" id="od-cancel" class="btn btn-ghost" hidden>Cancel order</button><button type="button" id="od-reorder" class="btn">Reorder</button></div>
+      <p id="od-msg" class="msg" role="status"></p>
+    </section>
+    <section class="card">
+      <h2>Progress</h2>
+      <ol id="od-timeline" class="timeline"></ol>
+    </section>
+    <form id="rv-form" class="card" novalidate>
+      <h2>Review</h2>
+      <ul id="rv-list" class="review-list"></ul>
+      <div class="field"><label for="rv-stars">Your rating</label><select id="rv-stars"><option value="">Choose</option><option value="5">5 stars: excellent</option><option value="4">4 stars: good</option><option value="3">3 stars: fine</option><option value="2">2 stars: poor</option><option value="1">1 star: bad</option></select></div>
+      <div class="field"><label for="rv-comment">Comment (optional)</label><textarea id="rv-comment" rows="3" maxlength="500"></textarea></div>
+      <p id="rv-msg" class="msg" role="status"></p>
+      <button type="submit" class="btn">Post review</button>
+      <p class="hint">Reviews are for delivered orders, one per order.</p>
+    </form>
+  </div>
+  <div class="stack">
+    <section class="card">
+      <h2>Receipt</h2>
+      <div class="table-wrap">
+        <table class="table" aria-label="Dishes">
+          <thead><tr><th>Dish</th><th class="num">Qty</th><th class="num">Price</th></tr></thead>
+          <tbody id="od-lines"></tbody>
+        </table>
+      </div>
+      <dl class="totals" id="od-totals"></dl>
+    </section>
+    <form id="mi-form" class="card" novalidate>
+      <h2>Something missing?</h2>
+      <ul id="mi-list" class="refund-list"></ul>
+      <div class="field-row">
+        <div class="field"><label for="mi-line">Dish</label><select id="mi-line"></select></div>
+        <div class="field"><label for="mi-qty">How many were missing</label><input id="mi-qty" type="number" min="1" value="1" inputmode="numeric"></div>
+      </div>
+      <p id="mi-msg" class="msg" role="status"></p>
+      <button type="submit" class="btn btn-ghost">Report missing items</button>
+      <p class="hint">Tell us within 48 hours of delivery.</p>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<nav class="tabs" id="mg-tabs" aria-label="Your restaurants"></nav>
+<h1 id="mg-title">Menu and hours</h1>
+<p id="loading" class="muted">Loading…</p>
+<div id="manage" hidden>
+  <section class="section">
+    <h2>Menu</h2>
+    <p class="muted small">Prices from £0.50 to £100.00. A dish marked sold out can't be ordered.</p>
+    <div class="table-wrap">
+      <table class="table" aria-label="Menu">
+        <thead><tr><th>Dish</th><th>Price (£)</th><th>Sold out</th><th></th></tr></thead>
+        <tbody id="mg-rows"></tbody>
+      </table>
+    </div>
+    <p id="mg-msg" class="msg" role="status"></p>
+  </section>
+  <div class="section grid-2">
+    <form id="hr-form" class="card" novalidate>
+      <h2>Opening hours</h2>
+      <p class="muted small" id="hr-now"></p>
+      <div class="field-row">
+        <div class="field"><label for="hr-open">Opens</label><select id="hr-open"></select></div>
+        <div class="field"><label for="hr-close">Closes</label><select id="hr-close"></select></div>
+      </div>
+      <fieldset><legend>Closed on</legend><div class="days" id="hr-days"></div></fieldset>
+      <p id="hr-msg" class="msg" role="status"></p>
+      <button type="submit" class="btn">Save hours</button>
+    </form>
+    <section class="card">
+      <h2>Daily sales</h2>
+      <div class="field"><label for="rp-date">Day</label><input id="rp-date" type="date"></div>
+      <dl class="facts" id="rp-facts"></dl>
+      <p class="hint">Orders for delivery that day, not counting rejected or cancelled ones.</p>
+      <p class="actions"><a id="rp-csv" class="btn btn-ghost">Download CSV</a></p>
+    </section>
+  </div>
+</div>
